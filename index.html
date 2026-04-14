@@ -1,1 +1,199 @@
-test
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给你的30岁</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 600px;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: rgba(255,255,255,0.3);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .container {
+      padding: 20px 40px;
+      position: relative;
+      width: 50%;
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .content {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .content:hover {
+      transform: translateY(-5px);
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      z-index: 1;
+    }
+
+    .left::before {
+      right: -6px;
+    }
+
+    .right::before {
+      left: -6px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container.right {
+        left: 0%;
+      }
+
+      .timeline::after {
+        left: 20px;
+      }
+
+      .container::before {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>与你共度的第三个年头</h1>
+  <p>
+    三年前的四月，我遇见了你。<br>
+    时间慢慢走到今天，你30岁了。<br>
+    我把我们的故事，写进这条时间里。
+  </p>
+</header>
+
+<section class="timeline">
+
+  <div class="container left">
+    <div class="content">
+      <h2>2023年4月 · 初见</h2>
+      <p>那天的风很普通，但你不普通。</p>
+      <img src="images/2023-04.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>2023年夏天 · 靠近</h2>
+      <p>聊天变成日常，思念开始有了形状。</p>
+      <img src="images/2023-summer.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>2023年冬天 · 确定</h2>
+      <p>冬天很冷，但有你在，一切都变得温暖。</p>
+      <img src="images/2023-winter.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>2024年 · 陪伴</h2>
+      <p>那些普通的日子，因为你，都在发光。</p>
+      <img src="images/2024.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content">
+      <h2>2025年 · 更深的牵绊</h2>
+      <p>你不只是恋人，更是我在人间的同路人。</p>
+      <img src="images/2025.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content">
+      <h2>2026年6月 · 第三个年头</h2>
+      <p>未来很长，我希望一直有你。</p>
+      <img src="images/2026.jpg" alt="">
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>接下来的时间，我们继续慢慢走 ❤️</p>
+</footer>
+
+</body>
+</html>
